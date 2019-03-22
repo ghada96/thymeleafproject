@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>students list</title>
+    <link rel="stylesheet" href="../static/bootstrap.css" th:href="@{/bootstrap.css}"/>
+
+</head>
+<body>
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th scope="col">name</th>
+        <th scope="col">lastname</th>
+        <th scope="col">group</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="student:${students}">
+        <td th:utext="${student.name}"></td>
+        <td  th:utext="${student.lastname}"></td>
+        <td th:utext="${student.group}"></td>
+    </tr>
+    </tbody>
+</table>
+
+<div>
+    <a class="btn btn-lg btn-primary" href="/addPerson" role="button">add a student &raquo;</a>
+
+</div>
+</body>
+</html>

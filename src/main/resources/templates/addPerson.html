@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>add person</title>
+    <link rel="stylesheet" href="../static/bootstrap.css" th:href="@{/bootstrap.css}"/>
+
+</head>
+
+<body >
+
+<div class="container">
+
+    <div class="row">
+
+
+        <div class="col-md-8 order-md-1">
+            <h4 class="mb-3">Student's informations</h4>
+            <form th:action="@{/addPerson}"
+                  th:object="${studentForm}" method="POST">
+                First Name:
+                <input type="text"  id="name"/>
+                <br/>
+                Last Name:
+                <input type="text" id="lastname"/><br/>
+                group:
+                <input type="text" id="group"/>
+                <br/>
+                <input type="submit" value="Create" />
+            </form>
+
+
+        </div>
+    </div>
+
+
+</div>
+</body>
+</html>
+
+
+
